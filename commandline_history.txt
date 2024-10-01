@@ -1,0 +1,144 @@
+    1  cd /etc/sysconfig/network-scripts
+    2  cat ifcfg-enp0s3
+    3  cat ifcfg-enp0s8
+    4  q
+    5  exit
+    6  whoami
+    7  ahoaim
+    8  whoami
+    9  echo "Hello World"
+   10  date
+   11  cal
+   12  man cal
+   13  q
+   14  exit
+   15  whoami
+   16  whoaim
+   17  whoami
+   18  echo "Hello World"
+   19  date
+   20  cal
+   21  man cal
+   22  Q
+   23  q
+   24  hystory
+   25  -q
+   26  man kill
+   27  q
+   28  exit
+   29  whoami
+   30  whoaim
+   31  whoami
+   32  echo "Hello World"
+   33  date
+   34  cal
+   35  cal -3
+   36  history
+   37  clear
+   38  pwd
+   39  cd /
+   40  cd ..
+   41  pwd
+   42  ls
+   43  ls /var
+   44  cd ~
+   45  cd ..
+   46  pwd
+   47  cd ~
+   48  ls -l
+   49  mkdir fruits
+   50  cd /
+   51  mkdir ~/animals
+   52  touch /tmp/temp
+   53  cd ~/fruits
+   54  touch apple bananaa pineaple lion
+   55  ls
+   56  touch ~/animals/cat.txt ~/animals/dog.txt ~/animals/elephant.txt
+   57  ls --time=birth apple
+   58  ls -i apple
+   59  ls -l --full-time --time=birth apple
+   60  ls b*
+   61  ls *a
+   62  ls [bi]*
+   63  cp /etc/psswd ~
+   64  cp /etc/passwd ~
+   65  cat /etc/issue
+   66  cat /etc/issue > apple
+   67  cat apple
+   68  mv lion ~/animals
+   69  mv pineaple pineapple
+   70  ls
+   71  wc /etc/passwd
+   72  cd ~
+   73  ln -s /etc/passwd passwd_link
+   74  ln .bash_history history_hard
+   75  ls -l
+   76  rm fruits/apple
+   77  mkdir rmme
+   78  rmdir rmme
+   79  rmdir fruits
+   80  rm -fr fruits
+   81  cat /etc/passwd /var/log/boot.log
+   82  cp /etc/init.d/ ~
+   83  cp -r /etc/init.d/ ~
+   84  rmdir init.d
+   85  cut -d: -f1 /etc/passwd | sort
+   86  cat /etc/passwd
+   87  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+   88  cut -d: -f1,3 /etc/passwd | sort
+   89  grep :/bin/bash /etc/passwd | wc -l
+   90  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort
+   91  cat /etc/passwd
+   92  rpm -qa --qf '{%NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+   93  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+   94  rpm -ql man-db | xargs -l du 2> /dev/null | sort -n
+   95  top -b -n1 
+   96  top -b -n1 | sort -k11
+   97  top -b -n1 | sort -k12
+   98  top -n -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+   99  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  100  cat /etc/passwd
+  101  cat /etc/passwd | sort -k1 | tr ':' ' '
+  102  cat /etc/passwd | sort -k1 | cut -d ' ' -f 1,5
+  103  cat /etc/passwd | sort -k1 | cut -d ':' -f 1,7
+  104  yum install -y git
+  105  dnf install -y git
+  106  cd /usr/share/doc/git*
+  107  su-
+  108  sudo
+  109  sudo dnf install -y git
+  110  cd /usr/share/doc/git*
+  111  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:] | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  112  l
+  113  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn |head -5
+  114  q
+  115  | 
+  116  ls
+  117  exit
+  118  >
+  119  history
+  120  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn |head -5
+  121  cd /usr/share/doc/git*
+  122  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn |head -5
+  123  tr '[:lower:]' '[:upper:]' < user-manual.txt | tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  124  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ....... | sort | uniq -c | sort -rn | head -5
+  125  cd ~
+  126  ping ya.ru
+  127  curl wttr.in
+  128  hostname -I
+  129  curl ifcinfig.me
+  130  curl ifconfig.me
+  131  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  132  sudo install -y wget
+  133  sudo install wget
+  134  sudo dnf install -y wget
+  135  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  136  ls
+  137  less README-ru.md
+  138  exit
+  139  history
+  140  sudo id
+  141  sudo less /var/log/messages
+  142  less /var/log/messages
+  143  su
+  144  history > commandline_history.txt
